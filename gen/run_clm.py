@@ -308,11 +308,13 @@ def main():
     random.seed(args.seed)
 
 
-    folder_name = f"canary_{str(args.canary_rep)}_{str(args.canary_len)}_adapter_{args.add_adapter}_head_{args.train_head_only}_layer_{args.train_layer_n_only}_ref_{args.do_ref_model}_maxlen_{args.block_size}_red_{args.adapter_reduction}_model_{args.model_name_or_path}_lr_{args.learning_rate}_epoch_{args.num_train_epochs}_trba_{args.per_device_train_batch_size}_acc_{args.gradient_accumulation_steps}_evba{args.per_device_eval_batch_size}_data_{args.dataset_name}"
+    # folder_name = f"canary_{str(args.canary_rep)}_{str(args.canary_len)}_adapter_{args.add_adapter}_head_{args.train_head_only}_layer_{args.train_layer_n_only}_ref_{args.do_ref_model}_maxlen_{args.block_size}_red_{args.adapter_reduction}_model_{args.model_name_or_path}_lr_{args.learning_rate}_epoch_{args.num_train_epochs}_trba_{args.per_device_train_batch_size}_acc_{args.gradient_accumulation_steps}_evba{args.per_device_eval_batch_size}_data_{args.dataset_name}"
+    folder_name = f"canary_{str(args.canary_rep)}_{str(args.canary_len)}_adapter_{args.add_adapter}_head_{args.train_head_only}_layer_{args.train_layer_n_only}_ref_{args.do_ref_model}_maxlen_{args.block_size}_red_{args.adapter_reduction}_model_GPT2_lr_{args.learning_rate}_epoch_{args.num_train_epochs}_trba_{args.per_device_train_batch_size}_acc_{args.gradient_accumulation_steps}_evba{args.per_device_eval_batch_size}_data_{args.dataset_name}"
     
     directory = "{}/{}".format(args.output_dir,folder_name)
-    if not os.path.exists(directory):
-        os.mkdir(directory)
+    os.makedirs(directory, exist_ok=True)
+    # if not os.path.exists(directory):
+    #     os.mkdir(directory)
     
     log_file = os.path.join(directory, "stdout")
 
@@ -375,7 +377,7 @@ def main():
             #raw_datasets['validation'] = load_dataset('csv', data_files={'train': 'data/cleaned_train.csv' ,'validation': 'data/cleaned_test.csv'}, split='train[4000:5000]')
 
         else:
-            raw_datasets = load_dataset(args.dataset_name, args.dataset_config_name)
+            raw_datasets = load_dataset(args.dataset_name, args.dataset_config_name, cache_dir="../data/wikitext")
             if "validation" not in raw_datasets.keys():
                 raw_datasets["validation"] = load_dataset(
                     args.dataset_name,

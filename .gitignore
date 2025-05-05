@@ -7,3 +7,4 @@ gen/wikipedia/logs/
 gen/canaries/
 gen/enron/logs/
 gen/enron/data/
+*.out

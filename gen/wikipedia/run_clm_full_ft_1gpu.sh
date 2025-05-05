@@ -1,7 +1,7 @@
 python  ../run_clm.py \
     --dataset_name wikitext \
     --dataset_config_name wikitext-2-raw-v1 \
-    --model_name_or_path gpt2 \
+    --model_name_or_path ../model/gpt2 \
     --output_dir ./logs/  \
     --eval_steps 100 \
     --learning_rate 1e-5 \
@@ -15,7 +15,7 @@ python  ../run_clm.py \
 python  ../run_clm.py \
     --dataset_name wikitext \
     --dataset_config_name wikitext-2-raw-v1 \
-    --model_name_or_path gpt2 \
+    --model_name_or_path ../model/gpt2 \
     --output_dir ./logs/  \
     --eval_steps 100 \
     --learning_rate 2e-5 \
@@ -28,7 +28,7 @@ python  ../run_clm.py \
 python  ../run_clm.py \
     --dataset_name wikitext \
     --dataset_config_name wikitext-2-raw-v1 \
-    --model_name_or_path gpt2 \
+    --model_name_or_path ../model/gpt2 \
     --output_dir ./logs/  \
     --eval_steps 100 \
     --learning_rate 5e-5 \
@@ -42,7 +42,7 @@ python  ../run_clm.py \
 python  ../run_clm.py \
     --dataset_name wikitext \
     --dataset_config_name wikitext-2-raw-v1 \
-    --model_name_or_path gpt2 \
+    --model_name_or_path ../model/gpt2 \
     --output_dir ./logs/  \
     --eval_steps 100 \
     --learning_rate 1e-4 \
@@ -56,7 +56,7 @@ python  ../run_clm.py \
 python  ../run_clm.py \
     --dataset_name wikitext \
     --dataset_config_name wikitext-2-raw-v1 \
-    --model_name_or_path gpt2 \
+    --model_name_or_path ../model/gpt2 \
     --output_dir ./logs/  \
     --eval_steps 100 \
     --learning_rate 2e-3 \
@@ -69,7 +69,7 @@ python  ../run_clm.py \
 python  ../run_clm.py \
     --dataset_name wikitext \
     --dataset_config_name wikitext-2-raw-v1 \
-    --model_name_or_path gpt2 \
+    --model_name_or_path ../model/gpt2 \
     --output_dir ./logs/  \
     --eval_steps 100 \
     --learning_rate 5e-4 \
@@ -82,7 +82,7 @@ python  ../run_clm.py \
 python  ../run_clm.py \
     --dataset_name wikitext \
     --dataset_config_name wikitext-2-raw-v1 \
-    --model_name_or_path gpt2 \
+    --model_name_or_path ../model/gpt2 \
     --output_dir ./logs/  \
     --eval_steps 100 \
     --learning_rate 8e-4 \
@@ -98,7 +98,7 @@ python  ../run_clm.py \
 python  ../run_clm.py \
     --dataset_name wikitext \
     --dataset_config_name wikitext-2-raw-v1 \
-    --model_name_or_path gpt2 \
+    --model_name_or_path ../model/gpt2 \
     --output_dir ./logs/  \
     --eval_steps 100 \
     --learning_rate 1e-3 \
@@ -114,7 +114,7 @@ python  ../run_clm.py \
 python  ../run_clm.py \
     --dataset_name wikitext \
     --dataset_config_name wikitext-2-raw-v1 \
-    --model_name_or_path gpt2 \
+    --model_name_or_path ../model/gpt2 \
     --output_dir ./logs/  \
     --eval_steps 100 \
     --learning_rate 2e-3 \
