@@ -8,3 +8,5 @@ gen/canaries/
 gen/enron/logs/
 gen/enron/data/
 *.out
+gen/data/
+gen/model/
